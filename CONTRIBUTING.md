@@ -41,4 +41,4 @@ If you encounter any **bugs**, please open an [issue](https://github.com/ojullie
 - Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
 
 ## License
-By contributing, you agree that your contributions will be licensed under its GNU GPL License.
+By contributing, you agree that your contributions will be licensed under its MIT License.
