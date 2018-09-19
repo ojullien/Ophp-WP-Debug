@@ -6,6 +6,6 @@
 desktop.ini
 composer.*
 !composer.json
+/docs/
 /vendor/
 /tests/_report/
-/docs/
