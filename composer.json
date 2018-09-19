@@ -1,0 +1,39 @@
+{
+    "name": "ophp/wp-debug",
+    "type": "library",
+    "description": "WordPress theme debugger",
+    "keywords": ["php-framework","worpdress-theme"],
+    "homepage":"https://github.com/ojullien/Ophp-WP-Debug",
+    "readme":"README.md",
+    "time":"2018-09-19",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olivier Jullien",
+            "homepage": "https://github.com/ojullien"
+        }
+    ],
+    "require": {
+        "php": "~7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ophp\\WP\\Debug\\": "src/"
+        }
+    },
+    "require-dev": {
+        "ext-xdebug": "*",
+        "squizlabs/php_codesniffer": "^3",
+        "phpunit/phpunit": "^7"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OphpTest\\WP\\Debug\\": "tests/src/"
+        }
+    },
+    "scripts": {
+        "testmycode": ["vendor/bin/phpunit"],
+        "sniffemycode": ["vendor/bin/phpcs --standard=phpcs.xml src;"],
+        "messmycode": ["vendor/bin/phpmd src text ./phpmd.xml"]
+    }
+}

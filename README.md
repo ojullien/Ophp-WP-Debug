@@ -23,7 +23,7 @@ This package requires PHP 7.2. For specifics, please examine the package [compos
 
 You may check if your PHP and extension versions match the platform requirements using `composer diagnose` and `composer check-platform-reqs`. (This requires [Composer](https://getcomposer.org/) to be available as composer.)
 
-This package is installable and PSR-4 autoloadable via [Composer](https://getcomposer.org/) as ophp/wp/debug. For no dev, use `composer install --no-dev` and for dev, use `composer install`.
+This package is installable and PSR-4 autoloadable via [Composer](https://getcomposer.org/) as ophp/wp-debug. For no dev, use `composer install --no-dev` and for dev, use `composer install`.
 
 Alternatively, [download a release](https://github.com/ojullien/Ophp-WP-Debug/releases), or clone this repository, then map the Ophp\WP\Debug namespace to the package src/ directory.
 
