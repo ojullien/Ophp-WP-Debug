@@ -8,3 +8,4 @@ composer.*
 !composer.json
 /vendor/
 /tests/_report/
+/docs/

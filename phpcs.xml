@@ -1,0 +1,50 @@
+﻿<?xml version="1.0"?>
+<ruleset name="PHP Coding Standards">
+    <!-- display progress -->
+    <arg value="p"/>
+    <arg name="colors"/>
+    <!-- inherit rules from: -->
+    <rule ref="PSR2">
+        <exclude name="Generic.Files.LineLength"/>
+    </rule>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    <rule ref="Generic.Formatting.SpaceAfterNot"/>
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing">
+        <properties>
+            <property name="ignoreNewlines" value="true"/>
+        </properties>
+    </rule>
+    <!-- 2. General -->
+    <!-- rule ref="Generic.NamingConventions.UpperCaseConstantName"/ -->
+    <!-- rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/ -->
+    <!-- rule ref="Generic.Strings.UnnecessaryStringConcat"/ -->
+    <!-- rule ref="PEAR.Commenting.FunctionComment">
+        <exclude name="PEAR.Commenting.FunctionComment.MissingReturn"/>
+        <exclude name="PEAR.Commenting.FunctionComment.MissingParamComment"/>
+        <exclude name="PEAR.Commenting.FunctionComment.SpacingBeforeTags"/>
+        <exclude name="PEAR.Commenting.FunctionComment.MissingParamTag"/>
+        <exclude name="PEAR.Commenting.FunctionComment.Missing"/>
+        <exclude name="PEAR.Commenting.FunctionComment.ParameterCommentsNotAligned"/>
+    </rule -->
+    <!-- Include the FunctionCallSignature sniff so we can set some properties
+       to enforce a single space after the opening parenthesis and before the
+       closing parenthesis, like this: test( $var );
+       But we only want two of the error codes from this sniff, no matter how
+       it changes over time, so set the severity of the entire sniff to 0
+       as this will exclude all message codes it produces. -->
+    <!-- rule ref="PEAR.Functions.FunctionCallSignature">
+        <properties>
+            <property name="requiredSpacesAfterOpen" value="1"/>
+            <property name="requiredSpacesBeforeClose" value="1"/>
+        </properties>
+        <severity>0</severity>
+    </rule -->
+    <!-- Now that we've excluded all message codes from FunctionCallSignature,
+       re-enable the two codes that we actually want. This will change the severity
+       of these codes from 0 (set by the above rule) to the default value (5). -->
+    <!-- rule ref="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket" / -->
+    <!-- rule ref="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket" / -->
+    <!-- Paths to check -->
+    <file>src</file>
+    <file>tests</file>
+</ruleset>
